@@ -3,7 +3,7 @@ package Arrays.BinarySearch;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
-
+// use divide and conquer to check if the array is sorted and then do the median calculation using binary search
 // https://leetcode.com/problems/median-of-two-sorted-arrays/description/
 public class Q4MedianOfTwoArrays {
     public static void main(String[] args) {
