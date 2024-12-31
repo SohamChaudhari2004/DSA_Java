@@ -12,7 +12,5 @@ public class Q1351CountNegOccurences {
 
 
 
-    static int maxNegCount(int[][] nums){
 
-    }
 }
