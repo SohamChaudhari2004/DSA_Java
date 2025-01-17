@@ -4,7 +4,7 @@ import java.util.Arrays;
 
 public class Q268MissingNO {
     public static void main(String[] args) {
-        int[] nums = {1,2};
+        int[] nums = {0,1,3};
         int ans = missingNumber(nums);
         System.out.println(ans);
 
