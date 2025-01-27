@@ -23,7 +23,9 @@ public class Q268MissingNO {
            if(nums[i] < nums.length && nums[i] != nums[correct]){
                swap(nums,i,correct);
            }
-           else i++;
+           else {
+               i++;
+           }
        }
 
         for (int j = 0; j < nums.length; j++) {
@@ -32,5 +34,22 @@ public class Q268MissingNO {
             }
         }
        return nums.length;
+    }
+
+
+    /**
+     * get the length of array range [1,n]
+     * calc the sum of all the elements in range n*(n+1)/2 => TotalSum
+     * get the actual sum of elements in the array(sum)
+     * subt totalSum - sum
+     */
+    static int missingNoUsingTsum(int[] nums){
+        int n = nums.length;
+        int totalSum = n*(n+1)/2;
+        int sum = 0;
+        for(int i=0; i<=n ; i++){
+            sum+=nums[i];
+        }
+        return totalSum-sum;
     }
 }

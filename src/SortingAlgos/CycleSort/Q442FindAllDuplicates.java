@@ -1,28 +1,22 @@
 package SortingAlgos.CycleSort;
 
-//import java.lang.classfile.Interfaces;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
-
-//https://leetcode.com/problems/find-all-numbers-disappeared-in-an-array/description/
- class Q448AllMissingNos {
+// https://leetcode.com/problems/find-all-duplicates-in-an-array/
+public class Q442FindAllDuplicates {
     public static void main(String[] args) {
-        int[] nums= {1,1};
-
-        System.out.println(findDisappearedNumbers(nums));
+        int[] nums = {4,3,2,7,8,2,3,1};
+        System.out.println(findDuplicates(nums));
 
     }
-
     static void swap(int[] nums , int first , int second){
         int temp = nums[first];
         nums[first]= nums[second];
         nums[second]= temp;
     }
 
-    static List<Integer> findDisappearedNumbers(int[] nums) {
-
-        int i = 0;
+    static List<Integer> findDuplicates(int[] nums) {
+        int i=0;
         while( i <nums.length){
             int correct = nums[i]-1;
             if(nums[i]!= nums[correct]){
@@ -34,11 +28,14 @@ import java.util.List;
         }
 
         List<Integer> ans = new ArrayList<>();
-        for (int j =0; j<nums.length;j++){
+        for(int j =0; j<nums.length;j++){
+            System.out.print(nums[j] + " ");
+
             if(nums[j] != j+1){
-                ans.add(j+1);
+                ans.add(nums[j]);
             }
         }
         return ans;
     }
+
 }
