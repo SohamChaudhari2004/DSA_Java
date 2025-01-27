@@ -5,7 +5,7 @@ import java.util.Arrays;
 //https://leetcode.com/problems/set-mismatch/
 public class Q2645SetMismatch {
     public static void main(String[] args) {
-        int[] nums=  {1,2,2,4};
+        int[] nums=  {1,1};
         System.out.println(Arrays.toString(findErrorNums(nums)));
 
     }
@@ -35,8 +35,8 @@ public class Q2645SetMismatch {
 
         for(int j = 0; j<nums.length; j++){
             if(nums[j] != j+1){
-                append(errNums, j+1);
-//                return new int[] {j+1};
+//                append(errNums, nums[j]);
+                return new int[] {nums[j] , j+1};
             }
         }
         return errNums;
